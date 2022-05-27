@@ -46,7 +46,13 @@ public class ControladorReservas{
                 return;
             }
             vista.getLabelError().setVisible(false);
-            String duracion = vista.getTextoDuracion().getText();
+            String duracion = vista.getTextoDuracion().getText().trim();
+            helpers.Duracion.insertarDuracion(duracion);
+            if(duracion == null){
+                vista.getLabelError2().setVisible(true);
+                return;
+            }
+            vista.getLabelError2().setVisible(false);
             String horaEntrada = vista.getTextoHoraEntrada().getText();
             Reserva reserva = new Reserva(fechaNueva,
                     Integer.parseInt(duracion), Integer.parseInt(horaEntrada), usuario.getDni());

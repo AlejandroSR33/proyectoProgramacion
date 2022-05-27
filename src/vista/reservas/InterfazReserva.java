@@ -26,6 +26,7 @@ public class InterfazReserva {
     private JLabel labelNombreUsuario;
     private JRadioButton radioBotonTipoReserva;
     private JLabel labelError;
+    private JLabel labelError2;
 
     public InterfazReserva() {
         ventanaReservas = new JFrame("Aplicación reservas");
@@ -36,6 +37,7 @@ public class InterfazReserva {
         //ventanaLogin.pack();
         ventanaReservas.setVisible(true);
         labelError.setVisible(false);
+        labelError2.setVisible(false);
     }
 
     public JFrame getVentanaReservas() {
@@ -72,6 +74,10 @@ public class InterfazReserva {
 
     public JLabel getLabelError() {
         return labelError;
+    }
+
+    public JLabel getLabelError2() {
+        return labelError2;
     }
 
     public static void main(String[] args) {
